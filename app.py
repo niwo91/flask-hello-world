@@ -1,10 +1,19 @@
-from flask import Flask
+from flask import Flask, url_for
 app = Flask(__name__)
 import psycopg2
 
 @app.route('/')
 def hello_world():
-    return 'Hello World from Nicholas Woody in 3308'
+    return '''
+            Hello World from Nicholas Woody in 3308
+            <p><p><h3>My Routes</h3>
+            <p><a href=url_for('db_test')>DB Test</a>
+            <p><a href=url_for('db_create')>DB Create</a>
+            <p><a href=url_for('db_insert')>DB Insert</a>
+            <p><a href=url_for('db_select')>DB Select</a>
+            <p><a href=url_for('db_drop')>DB Drop</a>
+        '''
+
 
 @app.route('/db_test')
 def db_test():
@@ -42,7 +51,7 @@ def db_insert():
         ('Stephen', 'Curry', 'San Francisco', 'Warriors', 30),
         ('Nikola', 'Jokic', 'Denver', 'Nuggets', 15),
         ('Kawhi', 'Leonard', 'Los Angeles', 'Clippers', 2),
-        ('Nicholas', 'Woody', 'CU BOULDER', 'Trailbalzers', 32);
+        ('Nicholas', 'Woody', 'CU BOULDER', 'Trailblazers', 32);
         ''')
     conn.commit() 
     conn.close()
