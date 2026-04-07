@@ -37,12 +37,13 @@ def db_insert():
     cur = conn.cursor
     cur.execute('''                                                                                                                          
         INSERT INTO Basketball (First, Last, City, Name, Number)
-        Values
+        VALUES
         ('Jayson', 'Tatum', 'Boston', 'Celtics', 0),
         ('Stephen', 'Curry', 'San Francisco', 'Warriors', 30),
         ('Nikola', 'Jokic', 'Denver', 'Nuggets', 15),
-        ('Kawhi', 'Leonard', 'Los Angeles', 'Clippers', 2);
-    ''')                                                                                                                                     
+        ('Kawhi', 'Leonard', 'Los Angeles', 'Clippers', 2),
+        ('Nicholas', 'Woody', 'CU BOULDER', 'Trailbalzers', 32);
+        ''')
     conn.commit() 
     conn.close()
     return "Basketball Table Succesfully Populated"
