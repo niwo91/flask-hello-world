@@ -32,7 +32,7 @@ def db_create():
 
 
 @app.route('/db_insert')
-def db_test():
+def db_insert():
     conn = psycopg2.connect("postgresql://nick:ZwHsLj5AY0n4bZxrIFxL8zZAPUt4DDBD@dpg-d7aj19fkijhs73dodnk0-a/nickdb_lvej")
     cur.execute('''                                                                                                                          
         INSERT INTO Basketball (First, Last, City, Name, Number)
@@ -48,7 +48,7 @@ def db_test():
 
 
 @app.route('/db_select')
-def db_test():
+def db_select():
     conn = psycopg2.connect("postgresql://nick:ZwHsLj5AY0n4bZxrIFxL8zZAPUt4DDBD@dpg-d7aj19fkijhs73dodnk0-a/nickdb_lvej")
     cur = conn.cursor()
     cur.execute('''
@@ -67,7 +67,7 @@ def db_test():
     return response_string
 
 @app.route('/db_drop')
-def db_test():
+def db_drop():
     conn = psycopg2.connect("postgresql://nick:ZwHsLj5AY0n4bZxrIFxL8zZAPUt4DDBD@dpg-d7aj19fkijhs73dodnk0-a/nickdb_lvej")
     cur = conn.cursor()
     cur.execute('''
