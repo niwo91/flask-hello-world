@@ -7,11 +7,11 @@ def hello_world():
     return '''
             Hello World from Nicholas Woody in 3308
             <p><p><h3>My Routes</h3>
-            <p><a href="{{ url_for('db_test') }}">DB Test</a>
-            <p><a href="{{ url_for('db_create') }}">DB Create</a>
-            <p><a href="{{ url_for('db_insert') }}">DB Insert</a>
-            <p><a href="{{ url_for('db_select') }}">DB Select</a>
-            <p><a href="{{ url_for('db_drop') }}">DB Drop</a>
+            <p><a href="https://nick-app.onrender.com/db_test">DB Test</a>
+            <p><a href="https://nick-app.onrender.com/db_create">DB Create</a>
+            <p><a href="https://nick-app.onrender.com/db_insert">DB Insert</a>
+            <p><a href="https://nick-app.onrender.com/db_select">DB Select</a>
+            <p><a href="https://nick-app.onrender.com/db_drop">DB Drop</a>
         '''
 
 
